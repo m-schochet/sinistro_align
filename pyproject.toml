@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aligner"
+dynamic = ["version"]
+
+dependencies = [
+"numpy",
+"glob",
+"astropy",
+"twirl",
+"pytz",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "aligner.__version__"}
+
+[tool.setuptools.packages]
+find = {}
